@@ -1,0 +1,417 @@
+html{
+    height: 100%;
+    margin: 0 auto;
+}
+body{
+    color: #fff;
+    background-color: rgb(30,30,30);
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+/* ------ Header ------- */
+header, header:before{
+    background: 50% 50% / cover;
+}
+header::before{
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    background-image: url("../images/header.gif");
+    background-size: cover;
+    transform-origin: center center 0;
+    z-index: -1;
+    height: 100vh;
+}
+header * { 
+    font-weight: normal;
+    text-align: center;
+    margin: 0;
+    padding: 0.4em 0;
+}
+.flipped-right p {
+    font-size: 1.5rem;
+}
+.flipped-right .citat {
+    font-size: 4rem;
+}
+.content-left p {
+    font-size: 1.5rem;
+}
+.content-left .citat {
+    font-size: 4rem;
+}
+.image {
+    height: 100vh;
+    width: 100%;
+    background-image: url("../images/img31.jpg");
+    background-size: cover;
+    border-bottom: 10px solid rgb(240,233,154);
+}
+.image2 {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    background-image: url("../images/IMG_01.png");
+    background-size: cover;
+}
+.big-text {
+    background-color: rgb(240,233,154);
+    height: 100vh;
+}
+.big-text p {
+    padding-top: 20%;
+    margin-left: 20%;
+    font-size: 4rem;
+    background-color:black;
+    color: rgb(240,233,154);
+}
+.title h2 {
+    text-align: center;
+    color: rgb(240,233,154);
+    font-size: 3rem;
+}
+/* ------ Video & audio ----- */
+.responsive {
+    padding: 0 6px;
+    float: left;
+    margin-bottom: 2%;
+}
+div.gallery img {
+    width: 100%;
+    height: auto;
+    border: 5px solid rgb(240,233,154);
+}
+
+div.desc {
+    color: white;
+}
+input[type=text] {
+    float: right;
+    margin-top: 1%;
+    margin-right: 2%;
+    padding-left: 0.5%;
+    border: 1px solid #ccc;
+    font-size: 0.5rem;
+    background-color: black;
+    color: white;
+}
+.audio {
+    text-align: center;
+    width: auto;
+    color: white;
+    font-size: 1.5rem;
+}
+.audio p {
+    height: 7vh;
+    font-size: 1.5rem;
+    color: rgb(240,233,154);
+}
+/* ----- Progress bar ------ */
+.progress {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: rgb(150,150,150);
+}
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: #ccc;
+}
+.progress-bar {
+  height: 8px;
+  background: rgb(130,130,130);
+  width: 0%;
+}
+/* -------- Back to the top -------- */
+.cd-top {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  bottom: 40px;
+  right: 10px;
+  /* image replacement properties */
+  overflow: hidden;
+  text-indent: 100%;
+  background: rgb(0, 0, 0) url(../images/cd-top-arrow.svg) no-repeat center 50%;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity .3s 0s, visibility 0s .3s, background-color .3s 0s;
+  transition: opacity .3s 0s, visibility 0s .3s, background-color .3s 0s;
+}
+.cd-top.cd-top--show,
+.cd-top.cd-top--fade-out,
+.cd-top:hover {
+  -webkit-transition: opacity .3s 0s, visibility 0s 0s, background-color .3s 0s;
+  transition: opacity .3s 0s, visibility 0s 0s, background-color .3s 0s;
+}
+.cd-top.cd-top--show {
+  /* the button becomes visible */
+  visibility: visible;
+  opacity: 1;
+}
+.cd-top.cd-top--fade-out {
+  /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+  opacity: .5;
+}
+.cd-top:hover {
+  background-color: rgb(34, 34, 33);
+  opacity: 1;
+}
+
+/* ----- Media Screen ------ */
+@media only screen and (min-width: 150px) {
+header {
+    border-bottom: 10px solid rgb(240,233,154);
+    box-sizing: border-box;
+    min-height: 100vh;
+    padding: 30vw 0 5vw;
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: 
+        ". a b b b c ."
+        ". a b b b c ."
+        ". a b b b c .";
+}
+header h1 {
+    grid-area: b;
+    align-self: center;
+    justify-content: center;
+    margin-top: -250px;
+    font-size: 2rem;    
+    width: 50vw;
+    background-color: rgb(240,233,154);
+    color: black;
+}
+header p {
+    width: 30vw;
+    background-color: rgb(240,233,154);
+    grid-area: b;
+    margin-top: 10px;
+    align-self: center;
+    padding-bottom: 1em;
+    justify-content: center;
+    width: 50vw;
+    font-size: 1.5rem;
+    color:  black;
+}
+.responsive {
+    width: 80%;
+    margin-left: 7%;
+}
+.text {
+    background-color: rgb(240, 233, 154);
+    height: 60vh;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: " . a . " " . a . " " . b  . " " . c  . " " . d  . " " . e  . " " . e  . ";
+}
+
+.text .en {
+    grid-area: b;
+    font-size: 2rem;
+    width: 100vw;
+    background-color: rgb(30, 30, 30);
+    color: rgb(240, 233, 154);
+    align-self: center;
+    justify-content: center;
+}
+
+.text .to {
+    grid-area: c;
+    font-size: 2rem;
+    background-color: rgb(30, 30, 30);
+    color: rgb(240, 233, 154);
+    align-self: center;
+    justify-content: center;
+}
+
+.text .tre {
+    grid-area: d;
+    font-size: 2rem;
+    background-color: rgb(30, 30, 30);
+    color: rgb(240, 233, 154);
+    align-self: center;
+    justify-content: center;
+}
+
+.flipped-right h2 {
+    font-size: 2rem;
+    color: black;
+    background-color: rgb(240, 233, 154);
+    text-align: center;
+    width: 100vw;
+}
+
+.content-left h2 {
+    font-size: 2rem;
+    color: black;
+    background-color: rgb(240, 233, 154);
+    text-align: center;
+    width: 100vw;
+}
+
+.video {
+    display: block;
+    width: 100%;
+    border-top: 10px solid rgb(240, 233, 154);
+    margin-top: 10%;
+    margin-bottom: 15%;
+}
+
+.video h2 {
+    text-align: center;
+    color: rgb(240, 233, 154);
+}
+
+.parallax {
+    background-image: url("../images/img31.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+header{
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+        ". a b b b c ."
+        ". a b b b c ."
+        ". a b b b c .";
+    }
+header h1 {
+    font-size: 3rem;    
+    width: 30vw;
+    background-color: rgb(240,233,154);
+
+    }
+header p {
+    width: 30vw;
+    }
+.text {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: " . a a a. " " . b b b. " " . c c c. " " . d d d. " " . e e e. ";
+    }
+
+.text .en {
+    font-size: 4rem;
+    width: 65vw;
+    }
+.text .to {
+    font-size: 4rem;
+    width: 34vw;
+    }
+.text .tre {
+    font-size: 4rem;
+    width: 65vw;
+    }  
+.flipped-right h2 {
+    font-size: 2rem;
+    color: black;
+    background-color: rgb(240, 233, 154);
+    text-align: left;
+    width: 35vw;
+    }
+.content-left h2 {
+    padding-right: 1%;
+    width: 30vw;
+    text-align: left;
+    }  
+.content-left {
+    width: 48%;
+    float: left;
+    font-size: 1.2rem;
+    margin-top: 18%;
+    margin-left: 1%;
+    margin-right: 1%;
+    }
+.content-right {
+    width: 48%;
+    float: left;
+    }
+.flipped-left img {
+    margin-top: 5%;
+    margin-left: 4%;
+    margin-bottom: 5%;
+    width: 100%;
+}
+.content-right img {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 100%;
+    }
+.flipped-right {
+    width: 48%;
+    float: left;
+    font-size: 1.2rem;
+    margin-top: 18%;
+    margin-left: 3.5%;
+    margin-right: 0.5%;
+    }
+.flipped-left {
+    width: 48%;
+    float: left;
+    }
+.parallax {
+    background-attachment: fixed;
+    }
+.cd-top {
+    right: 20px;
+    bottom: 20px;
+}
+.video {
+    border-top: 10px solid rgb(240, 233, 154);
+    border-bottom: 10px solid rgb(240, 233, 154);
+    width: 100%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    background-color: rgb(30, 30, 30);
+    height: 110vh;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-areas: ". a a a a a ." ". a a a a a .";
+    }
+.video h2 {
+    text-align: center;
+    grid-area: a;
+    margin-top: 3%;
+    color: rgb(240, 233, 154);
+    font-size: 3rem;
+    }
+#vid {
+    grid-area: a;
+    align-self: center;
+    justify-content: center;
+    margin-top: 0%;
+    }
+#vid2 {
+    grid-area: a;
+    align-self: center;
+    justify-content: center;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    .responsive {
+        width: 28%;
+        margin-left: 3.3%;
+    }
+    .cd-top {
+        height: 60px;
+        width: 60px;
+        right: 30px;
+        bottom: 30px;
+    }
+}
